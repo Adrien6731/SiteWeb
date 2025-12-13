@@ -811,6 +811,17 @@
       background: var(--color-primary-hover);
     }
 
+    .project-body .status-badge {
+      display: inline-block;
+      margin-bottom: 15px;
+      /* espace sous le badge */
+    }
+
+    .project-body .project-description {
+      margin-bottom: 15px;
+      /* espace sous le texte */
+    }
+
     /* Experiences Section */
     #experiences {
       background-color: var(--color-bg-1);
@@ -914,6 +925,8 @@
     .project-body {
       padding: var(--space-24);
     }
+
+
 
     .project-description {
       font-size: var(--font-size-base);
@@ -1233,6 +1246,7 @@
       margin: var(--space-16) 0;
       box-shadow: var(--shadow-md);
       transition: transform var(--duration-normal) var(--ease-standard);
+      margin-bottom: 2px;
     }
 
     .project-photo:hover {
@@ -1246,6 +1260,7 @@
       font-style: italic;
       text-align: center;
       margin-top: var(--space-8);
+      margin-top: 2px;
     }
 
     .aero-photo {
@@ -1577,12 +1592,6 @@
               Learn more
             </a>
           </div>
-
-
-
-
-
-
     </section>
   </div>
 
@@ -1591,8 +1600,7 @@
   <!-- PAGE 3: PROJETS -->
   <div id="page-projets" class="page">
     <section id="projects-page" style="padding-top: 100px; background-color: var(--color-background);">
-      <h2 class="section-title">Mes Projets </h2>
-      <p class="passion-subtitle">Projets académiques, techniques et personnels</p>
+      <h2 class="section-title">My Projects </h2>
 
       <div class="projects-grid">
 
@@ -1601,23 +1609,24 @@
         <!-- Projet 2: SmartCar -->
         <div class="project-card">
           <div class="project-header">
-            <h3>SmartCar Voiture connectée connectée</h3>
-            <p class="project-category">Projet ICAM - Robotique</p>
+            <h3>SmartCar Autonomous Connected Vehicle</h3>
+            <p class="project-category">BUT/ICAM Project</p>
           </div>
           <div class="project-body">
-            <span class="status-badge" style="background: var(--color-success);">Terminé</span>
+            <span class="status-badge" style="background: var(--color-success);">Completed</span>
             <p class="project-description">
-              Projet de véhicule autonome avancé avec systèmes intégrés. Développement d'une plateforme automobile
-              intelligente intégrant capteurs, contrôle moteur et systèmes de navigation.
+              Autonomous vehicle project integrating embedded electronics and software development.
+              Design, simulation, and unit testing of the PCB using Proteus, followed by development of the control
+              software in VS Code for sensor management, motor control, and line-following functionality.
             </p>
-            <p style="font-style: italic; color: var(--color-text-secondary);">
-              Détails techniques disponibles sur demande
-            </p>
+            <span class="skill-tag">Proteus</span>
+            <span class="skill-tag">C/C++</span>
+            <span class="skill-tag">Embedded Systems</span>
             <div class="project-skills">
-              <span class="skill-tag">Systèmes embarqués</span>
-              <span class="skill-tag">Électronique</span>
-              <span class="skill-tag">Programmation</span>
               <img src="Car.png" alt="Formation PPL - Cockpit" class="aero-photo" style="border: none;">
+              <p class="photo-caption">View of the SmartCar with integrated sensors and PCB</p>
+
+              </p>
 
             </div>
           </div>
@@ -1626,87 +1635,89 @@
         <!-- Projet 3: Station de Triage -->
         <div class="project-card">
           <div class="project-header">
-            <h3>Station de Triage de Pièces Automatisée</h3>
-            <p class="project-category">Automatisation Industrielle</p>
+            <h3>Automated Parts Sorting Station </h3>
+            <p class="project-category">IUT S3 Project</p>
           </div>
           <div class="project-body">
-            <span class="status-badge" style="background: var(--color-success);">Terminé</span>
+            <span class="status-badge" style="background: var(--color-success);">Completed</span>
             <p class="project-description">
-              Conception et programmation d'une station de triage automatisée pour le tri de pièces industrielles.
-              Projet complet d'automatisation avec programmation Ladder, interface HMI et contrôle par automate.
+              Industrial automation project: design and programming of a parts sorting station using an HMI.
+              Implementation with Vijeo Designer, Control Expert, Ladder programming, and real-time supervision.
+
             </p>
-            <h4>Composants:</h4>
-            <ul>
-              <li>• Contrôle par automate programmable (PLC)</li>
-              <li>• Interface Homme-Machine (IHM) tactile</li>
-              <li>• Mécanismes de tri automatisés</li>
-              <li>• Supervision et monitoring temps réel</li>
-            </ul>
             <div class="project-skills">
               <span class="skill-tag">Ladder</span>
-              <span class="skill-tag">PLC</span>
+              <span class="skill-tag">Vijeo</span>
               <span class="skill-tag">IHM</span>
-              <span class="skill-tag">Automatisme</span>
-              <span class="skill-tag">Contrôle industriel</span>
             </div>
+            <br><br>
+
+            <img src="IHM.jpeg" alt="Formation PPL - Cockpit" class="aero-photo" style="border: none;">
+            <p class="photo-caption">⚙️ View of the complete station</p>
+
+
           </div>
         </div>
 
         <!-- Projet 4: Système Stabilisateur Giroscopique -->
         <div class="project-card">
           <div class="project-header">
-            <h3>Système Stabilisateur Giroscopique</h3>
-            <p class="project-category">Projet Personnel - Électronique Embarquée</p>
+            <h3>Gyroscopic Stabilization System</h3>
+            <p class="project-category">IUT S4 Project</p>
           </div>
           <div class="project-body">
-            <span class="status-badge" style="background: var(--color-success);">Terminé </span>
+            <span class="status-badge" style="background: var(--color-success);">Completed </span>
             <p class="project-description">
-              Système de stabilisation giroscopique avec intégration de capteurs avancés. Projet personnel complet
-              combinant acquisition de données inertielles, traitement temps réel et contrôle de servomoteurs.
+              Project using ESP-NOW communication. One side: the piloted system with a gyroscope and 2 servos (2 axes).
+              Other side: ESP controller with a gyroscope to control the system. The setup stabilizes the system while
+              following head movements.
             </p>
-            <img src="IMG_0477.jpeg" alt="Système Stabilisateur Giroscopique" class="project-photo">
-            <p class="photo-caption">⚙️ Le système complet : BMI 160, 2 ESP32, servomoteurs et circuit personnalisé</p>
-            <h4>Composants clés:</h4>
-            <ul>
-              <li>• BMI 160 - Capteur inertiel 6 axes (gyroscope + accéléromètre)</li>
-              <li>• 2x ESP32 - Double microcontrôleur pour traitement et contrôle</li>
-              <li>• 2x Servomoteurs - Actionneurs de stabilisation</li>
-              <li>• PCB personnalisé - Circuit imprimé conçu sur mesure</li>
-            </ul>
-            <h4>Fonctionnalités:</h4>
             <div class="project-skills">
               <span class="skill-tag">BMI 160</span>
-              <span class="skill-tag">ESP32</span>
-              <span class="skill-tag">Servomoteurs</span>
               <span class="skill-tag">C++</span>
-              <span class="skill-tag">PCB Design</span>
-              <span class="skill-tag">Systèmes embarqués</span>
-              <span class="skill-tag">Capteurs inertiels</span>
+              <span class="skill-tag">Embedded Systems</span>
+              <span class="skill-tag">Sensor Integration</span>
               <span class="skill-tag">IoT</span>
             </div>
+            <img src="IMG_0477.jpeg" alt="Système Stabilisateur Giroscopique" class="project-photo">
+            <p class="photo-caption">⚙️ Full system: BMI 160, 2x ESP32, servos</p>
+
+
           </div>
         </div>
 
         <!-- Projet 5: Boîte Noire -->
         <div class="project-card">
           <div class="project-header" style="background: linear-gradient(135deg, #FF8C00 0%, #FFB347 100%);">
-            <h3>Boîte Noire Aéronautique </h3>
-            <p class="project-category">Projet Personnel / Aéronautique</p>
+            <h3>Aeronautical Black Box </h3>
+            <p class="project-category">Personal Project</p>
           </div>
           <div class="project-body">
-            <span class="status-badge" style="background: #FF8C00;">Terminé </span>
+            <span class="status-badge" style="background: #FF8C00;">Completed </span>
             <p class="project-description">
-              Boîte noire miniaturisée pour l'enregistrement de données de vol et la télémétrie. Projet embarqué avancé.
+              Miniaturized aeronautical black box inspired by aircraft flight recorders.
+              The hardware includes an accelerometer (BMI160), GPS (NEO7M), pressure sensor, LiDAR,
+              micro SD module, and ESP32, enabling local data logging and LoRa/VHF transmission.
             </p>
+            <p class="project-description">
+              On the software side, the system uses the Haversine formula to compute distance
+              (as an ADF/NDB replacement), calculates speed by combining accelerometer and GPS
+              data with a Kalman filter, and implements LiDAR-based TCAS monitoring.
+            </p>
+            <p class="project-description">
+              The drone system integrates BMI160, ATX, NEO7M, micro SD, and ESP32, while the pilot
+              system combines a buzzer, TFT display, ESP32, and NEO7M for feedback and visualization.
+            </p>
+
             <div class="project-skills">
               <span class="skill-tag">SolidWorks</span>
               <span class="skill-tag">C++</span>
               <span class="skill-tag">PCB Design</span>
               <span class="skill-tag">Haversine</span>
               <span class="skill-tag">Kalman</span>
-              <img src="BN.jpg" alt="Boîte Noire Aéronautique" class="project-photo" style="border: none;">
-
             </div>
+            <img src="BN.jpg" alt="Boîte Noire Aéronautique" class="project-photo" style="border: none;">
+            <p class="photo-caption">⚙️ Full System: Pilot and Drone Integration</p>
           </div>
         </div>
 
@@ -1717,7 +1728,7 @@
             <p class="project-category">Projet Personnel / Aéronautique</p>
           </div>
           <div class="project-body">
-            <span class="status-badge" style="background: #FF8C00;">En cours ⏳</span>
+            <span class="status-badge" style="background: #FF8C00;">In progress⏳</span>
             <p class="project-description">
               Développement d’un drone complet avec navigation autonome, collecte de données et traitement embarqué.
               Suite logique du projet Boîte Noire.
@@ -1740,7 +1751,7 @@
             <p class="project-category">Projet Personnel / Radio Amateur</p>
           </div>
           <div class="project-body">
-            <span class="status-badge" style="background: #FF8C00;">En cours ⏳</span>
+            <span class="status-badge" style="background: #FF8C00;">In progress ⏳</span>
             <p class="project-description">
               Développement d’une antenne RX/TX dans le cadre du diplôme Radio Amateur. Optimisation des signaux émis et
               reçus.
@@ -1750,8 +1761,7 @@
               <span class="skill-tag">RF Design</span>
               <span class="skill-tag">Électronique</span>
               <span class="skill-tag">Tests & Mesures</span>
-              <img src="images.jpeg" alt="Formation PPL - Cockpit" class="aero-photo"
-                style="border: none;">
+              <img src="images.jpeg" alt="Formation PPL - Cockpit" class="aero-photo" style="border: none;">
 
             </div>
           </div>
