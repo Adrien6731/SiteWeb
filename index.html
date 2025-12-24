@@ -137,6 +137,7 @@
       --navy-blue: #1a2844;
       --light-blue: #0088cc;
       --accent-orange: #ff6b35;
+
     }
 
     @media (prefers-color-scheme: dark) {
@@ -171,6 +172,19 @@
     html {
       scroll-behavior: smooth;
       font-family: var(--font-family-base);
+    }
+
+    .footer-signature {
+      margin-top: var(--space-16);
+      text-align: left;
+      /* ou right selon préférence */
+    }
+
+    .footer-signature img {
+      max-width: 200px;
+      /* ajuste selon ton image */
+      height: auto;
+      display: inline-block;
     }
 
 
@@ -217,6 +231,7 @@
       gap: var(--space-32);
       list-style: none;
     }
+
 
     .nav-link {
       color: var(--color-text);
@@ -1367,7 +1382,9 @@
   <!-- Header Navigation -->
   <header class="header">
     <nav class="nav-container">
-      <a href="#" class="logo" data-page="accueil">Stagnara Adrien</a>
+<a href="#" class="logo" data-page="accueil">
+  <img src="Capture d’écran 2025-12-24 à 10.49.53.png" style="height: 45px; display: block;">
+</a>
       <ul class="nav-menu">
         <li><a href="#" class="nav-link" data-page="accueil">Home</a></li>
         <li><a href="#" class="nav-link" data-page="aeronautique">Aeronautics</a></li>
@@ -1470,7 +1487,7 @@
           </ul>
         </div>
         <div class="passion-card">
-          <div class="passion-icon">🚑</div>
+          <div class="passion-icon">🧑‍🚒</div>
           <h3 class="passion-title">First Aid</h3>
           <p class="passion-brief">Head Instructor at CSSB</p>
           <p class="passion-description">Compagnie Secouriste Sainte Barbe</p>
@@ -1478,7 +1495,7 @@
         <div class="passion-card">
           <div class="passion-icon">✈️</div>
           <h3 class="passion-title">Aviation</h3>
-          <p class="passion-brief">BIA, Amateur Radio, PPL in Progress</p>
+          <p class="passion-brief">BIA, Radio Amateur, PPL in Progress</p>
           <p class="passion-description">Aviation Enthusiast Since Middle School</p>
         </div>
       </div>
@@ -1712,7 +1729,6 @@
             <div class="project-skills">
               <span class="skill-tag">SolidWorks</span>
               <span class="skill-tag">C++</span>
-              <span class="skill-tag">PCB Design</span>
               <span class="skill-tag">Haversine</span>
               <span class="skill-tag">Kalman</span>
             </div>
@@ -1724,22 +1740,25 @@
         <!-- Projet 6: Drone Complet -->
         <div class="project-card">
           <div class="project-header" style="background: linear-gradient(135deg, #FF8C00 0%, #FFB347 100%);">
-            <h3>Système Drone Complet</h3>
-            <p class="project-category">Projet Personnel / Aéronautique</p>
+            <h3>Complete Drone System</h3>
+            <p class="project-category">Personal Project</p>
           </div>
           <div class="project-body">
             <span class="status-badge" style="background: #FF8C00;">In progress⏳</span>
             <p class="project-description">
-              Développement d’un drone complet avec navigation autonome, collecte de données et traitement embarqué.
-              Suite logique du projet Boîte Noire.
+              Development of a complete drone system with autonomous navigation, long-range data acquisition, and
+              onboard processing. Logical continuation of the Black Box and antenna design projects.
             </p>
             <div class="project-skills">
               <span class="skill-tag">ESP32</span>
-              <span class="skill-tag">Capteurs LiDAR</span>
-              <span class="skill-tag">LoRa / Wi-Fi / LTE</span>
-              <span class="skill-tag">Systèmes embarqués</span>
-              <span class="skill-tag">Télémétrie</span>
+              <span class="skill-tag">LiDAR sensors</span>
+              <span class="skill-tag">LoRa / 4G / LTE</span>
+              <span class="skill-tag">PCB Design</span>
+              <span class="skill-tag">Mobile App</span>
+
               <img src="Cikad.png" alt="Système Drone Complet" class="project-photo" style="border: none;">
+              <img src="Drone.png" alt="Formation PPL - Cockpit" class="aero-photo" style="border: none;">
+
             </div>
           </div>
         </div>
@@ -1747,21 +1766,23 @@
         <!-- Projet 7: Antenne RX/TX -->
         <div class="project-card">
           <div class="project-header" style="background: linear-gradient(135deg, #FF8C00 0%, #FFB347 100%);">
-            <h3>Création d’une Antenne RX/TX</h3>
-            <p class="project-category">Projet Personnel / Radio Amateur</p>
+            <h3>RX/TX Antenna Design</h3>
+            <p class="project-category">Personal Project / Radio Amateur</p>
           </div>
           <div class="project-body">
             <span class="status-badge" style="background: #FF8C00;">In progress ⏳</span>
             <p class="project-description">
-              Développement d’une antenne RX/TX dans le cadre du diplôme Radio Amateur. Optimisation des signaux émis et
-              reçus.
+              Design and optimization of an RX/TX antenna as part of the Amateur Radio License.
+              Signal transmission and reception performance optimization.
             </p>
             <div class="project-skills">
               <span class="skill-tag">Radio Amateur</span>
+              <span class="skill-tag">ActInSpace</span>
               <span class="skill-tag">RF Design</span>
-              <span class="skill-tag">Électronique</span>
-              <span class="skill-tag">Tests & Mesures</span>
+              <span class="skill-tag">Spectral Analysis</span>
+              <span class="skill-tag">VNA</span>
               <img src="images.jpeg" alt="Formation PPL - Cockpit" class="aero-photo" style="border: none;">
+              <img src="Vna.PNG" alt="Formation PPL - Cockpit" class="aero-photo" style="border: none;">
 
             </div>
           </div>
@@ -1922,12 +1943,18 @@
         <a href="#" class="footer-link" data-page="projets">Projects</a>
         <a href="#" class="footer-link" data-page="experiences">Experience</a>
       </div>
+
       <div style="margin-top: var(--space-16); color: var(--color-text-secondary); font-size: var(--font-size-sm);">
         <p style="margin: 0;"><strong>Contact:</strong> adrien.stagnara@collins.fr</p>
       </div>
-      <p class="copyright" style="margin-top: var(--space-16);">© 2025 Adrien Stagnara. All Rights Reserved.</p>
+
+
+
+      <p class="copyright" style="margin-top: var(--space-16);">© 2026 Adrien Stagnara. All Rights Reserved.</p>
+      
     </div>
   </footer>
+
 
   <script>
     // Page Navigation System
